@@ -2,13 +2,14 @@
  * @Author: zhongxian.chen
  * @Date: 2022-12-27 20:28:25
  * @LastEditors: zhongxian.chen
- * @LastEditTime: 2022-12-28 22:14:03
+ * @LastEditTime: 2023-01-10 21:42:15
  * @Description: 
  * 
  * Copyright (c) 2022 by zhongxian.chen, All Rights Reserved. 
  */
 #include "base/CurrentThread.h"
 #include "base/Thread.h"
+#include "base/FileUtil.h"
 #include <iostream>
 #include <unistd.h>
 void func(){
@@ -19,8 +20,10 @@ void func(){
     }
 }
 int main(){
-    Thread th(func);
-    th.start();
+    // Thread th(func);
+    // th.start();
     std::cout<<CurrentThread::tid()<<std::endl;
     std::cout<<"Hello World!"<<std::endl;
+    AppendFile  log("test.log");
+    log.append("Hello World",12);
 }

@@ -6,9 +6,9 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
 endif()
 
- set(CMAKE_CXX_COMPILER "g++")
- set(CMAKE_CXX_FLAGS_DEBUG "-O0")
- set(CMAKE_CXX_FLAGS_RELEASE "-O0")
+#  set(CMAKE_CXX_COMPILER "g++")
+#  set(CMAKE_CXX_FLAGS_DEBUG "-O0")
+#  set(CMAKE_CXX_FLAGS_RELEASE "-O0")
 
 #  set(CXX_FLAGS
 #     -g
@@ -21,6 +21,7 @@ set(src
     base/CountDownLatch.cpp
     base/CurrentThread.h
     base/Thread.cpp
+    base/FileUtil.cpp
     main_test.cpp
 )
 
