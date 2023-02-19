@@ -2,7 +2,7 @@
  * @Author: zhongxian.chen
  * @Date: 2022-12-27 20:44:08
  * @LastEditors: zhongxian.chen
- * @LastEditTime: 2023-02-07 23:31:03
+ * @LastEditTime: 2023-02-19 16:01:22
  * @Description: 
  * 
  * Copyright (c) 2022 by zhongxian.chen chenzhongxian06@gmail.com, All Rights Reserved. 
@@ -11,10 +11,11 @@
 #define BASE_CONDITION_H
 
 #include "noncopyable.h"
-#include "Mutex.h"
-
+#include "MutexLock.h"
+#include <time.h>
+#include <cstdint>
 #include <pthread.h>
-
+#include <errno.h>
 class Condition : noncopyable{
 public:
     explicit Condition(MutexLock& mutex) : mutex_(mutex){

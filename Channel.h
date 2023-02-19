@@ -2,7 +2,7 @@
  * @Author: zhongxian.chen
  * @Date: 2023-02-12 12:44:09
  * @LastEditors: zhongxian.chen
- * @LastEditTime: 2023-02-13 21:19:39
+ * @LastEditTime: 2023-02-19 16:16:19
  * @Description:
  *
  * Copyright (c) 2023 by zhongxian.chen, All Rights Reserved.
@@ -24,7 +24,7 @@ class Channel
 {
 private:
     typedef std::function<void()> CallBack;
-    EventLoop *loop;
+    EventLoop *loop_;
     int fd_;
     __uint32_t events_;
     __uint32_t revents_;

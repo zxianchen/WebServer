@@ -7,9 +7,9 @@
 #include <iostream>
 #include "Channel.h"
 #include "EventLoop.h"
-#include "Util.h"
+#include "Utils.h"
 #include "time.h"
-
+#include "base/Logging.h"
 using namespace std;
 
 pthread_once_t MimeType::once_control = PTHREAD_ONCE_INIT;

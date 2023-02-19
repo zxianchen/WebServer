@@ -10,20 +10,32 @@ endif()
 #  set(CMAKE_CXX_FLAGS_DEBUG "-O0")
 #  set(CMAKE_CXX_FLAGS_RELEASE "-O0")
 
-#  set(CXX_FLAGS
-#     -g
-#     -Wall
-#     -std=c++11
-#     -D_PTHREADS
-#     -Wno-unused-parameter
-# )
-set(src
+ set(CXX_FLAGS
+    -g
+    -Wall
+    -std=c++11
+    -D_PTHREADS
+    -Wno-unused-parameter
+)
+set(WebServerSrc
+    base/AsyncLogging.cpp
     base/CountDownLatch.cpp
-    base/CurrentThread.h
+    base/FIleUtil.cpp
+    base/LogFile.cpp
+    base/LogStream.cpp
     base/Thread.cpp
-    base/FileUtil.cpp
-    main_test.cpp
+    base/Logging.cpp
+    Channel.cpp
+    Epoll.cpp
+    EventLoop.cpp
+    EventLoopThread.cpp
+    EventLoopThreadPool.cpp
+    HttpData.cpp
+    Server.cpp
+    Timer.cpp
+   # Utils.cpp
+    main.cpp
 )
 
-add_executable(main ${src})
-target_link_libraries(main pthread)
+add_executable(WebServer ${WebServerSrc})
+target_link_libraries(WebServer pthread)

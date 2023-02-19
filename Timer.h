@@ -2,7 +2,7 @@
  * @Author: zhongxian.chen
  * @Date: 2023-02-12 12:48:58
  * @LastEditors: zhongxian.chen
- * @LastEditTime: 2023-02-15 21:44:10
+ * @LastEditTime: 2023-02-19 16:01:43
  * @Description:
  *
  * Copyright (c) 2023 by zhongxian.chen, All Rights Reserved.
@@ -16,7 +16,7 @@
 #include <queue>
 #include "HttpData.h"
 #include "base/noncopyable.h"
-#include "base/Mutex.h"
+#include "base/MutexLock.h"
 
 class HttpData;
 
